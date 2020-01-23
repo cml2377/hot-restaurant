@@ -13,10 +13,9 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// Grabbing html files 
-// app.use(express.static('./html/home.html'))
 app.use(express.static('assets'))
+
+// app.use(express.static('files'))
 
 // Star Wars Characters (DATA)
 // =============================================================
@@ -32,33 +31,32 @@ var tables = [{
     name: "Brent",
     phone_number: "666-6666",
     email: "example@email.com",
-    id: 1,
+    id: 2,
 },
 {
     routeName: "table_3",
     name: "Grent",
     phone_number: "777-7777",
     email: "example@email.com",
-    id: 1,
-},
-];
+    id: 3,
+}];
 
-module.export = tables;
+// module.export = tables;
 
 // Routes
 // =============================================================
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "./html/home.html"));
+    res.sendFile(path.join(__dirname, "html/home.html"));
 });
 
 app.get("/reserve", function (req, res) {
-    res.sendFile(path.join(__dirname, "./html/reserve.html"));
+    res.sendFile(path.join(__dirname, "html/reserve.html"));
 });
 
 app.get("/tables", function (req, res) {
-    res.sendFile(path.join(__dirname, "./html/tables.html"));
+    res.sendFile(path.join(__dirname, "html/tables.html"));
 });
 
 //display all the reservations
@@ -67,7 +65,7 @@ app.get("/api/tables", function (req, res) {
 });
 
 //creating new reservation
-app.post("/api/tables", function (req, res) {
+app.post("/api/newtables", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newTable = req.body;
