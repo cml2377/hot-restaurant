@@ -17,10 +17,6 @@ app.use(express.static('assets'))
 
 // app.use(express.static('files'))
 
-// Grabbing html files 
-// app.use(express.static('./html/home.html'))
-app.use(express.static('assets'))
-
 // Star Wars Characters (DATA)
 // =============================================================
 var tables = [{
@@ -52,15 +48,15 @@ var tables = [{
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "./home.html"));
+    res.sendFile(path.join(__dirname, "html/home.html"));
 });
 
 app.get("/reserve", function (req, res) {
-    res.sendFile(path.join(__dirname, "./reserve.html"));
+    res.sendFile(path.join(__dirname, "html/reserve.html"));
 });
 
 app.get("/tables", function (req, res) {
-    res.sendFile(path.join(__dirname, "./tables.html"));
+    res.sendFile(path.join(__dirname, "html/tables.html"));
 });
 
 //display all the reservations
