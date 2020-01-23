@@ -2,11 +2,13 @@ body {
     background-image: url(../images/elvir-k-0y6Y56Pw6DA-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Amarante', cursive;
 }
 
-.jumbotron {
+.container {
     background-color: rgba(65, 65, 65, 0.432);
     color: #e9d878;
+    border-radius: 4px;
 }
 
 h2,

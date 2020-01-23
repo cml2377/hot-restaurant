@@ -20,10 +20,10 @@ submit_b_e.on("submit", function () {
     const id = id_i_e.val()
     console.log(id)
 
-}
+})
 
-        //making reservations on click
-        submit_b_e.on("click", function () {
+//making reservations on click
+submit_b_e.on("click", function () {
     event.preventDefault();
     var newTable = {
         name: name_i_e.val().trim(),
