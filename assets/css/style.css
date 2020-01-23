@@ -26,3 +26,7 @@ h4,
 a {
     color: #e9d878;
 }
+
+a:hover {
+    color: rgb(219, 77, 77);
+}
