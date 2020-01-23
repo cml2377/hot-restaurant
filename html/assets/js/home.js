@@ -7,14 +7,27 @@ const phone_number_i_e = $("#phone_number_i")
 const email_i_e = $("#email_i")
 const id_i_e = $("#id_i")
 
+// Don't worry about me Leo, just writing JS for images in home.html
+// MDB Lightbox Init
+$(function () {
+    $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+});
 
-
+//making reservations on click
 make_reservations_b_e.on("click", function () {
-    // var searchedCharacter = $("#character-search").val().trim();
+    event.preventDefault();
+    var newTable = {
+        name: $("#name_i").val().trim(),
+        phone_number: $("#phone_number_i").val().trim(),
+        email: $("#email_i").val().trim(),
+        id: $("#id_i").val().trim()
+    };
 
-    // Using a RegEx Pattern to remove spaces from searchedCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    // searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
-
-
+    // Question: What does this code do??
+    $.post("/api/tables", newTable)
+        .then(function (data) {
+            //Don't know what need here
+            console.log("home.html", data);
+            alert("Adding your reservation...");
+        });
 });

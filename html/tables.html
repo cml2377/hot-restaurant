@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="/html/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="/js/tables.js"></script>
 
 </head>
@@ -25,8 +25,36 @@
             <button id="make_reservation_b" type="button" class="btn btn-primary">Make Reservations</button>
             <button id="home_b" type="button" class="btn btn-secondary">Home</button>
         </div>
-        <div>
-            <!--List of tables goes here-->
+
+        <!--List of tables goes here-->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Current Reservations</h4>
+                    </div>
+                    <div class="panel-body" id="tableSection">
+                        <div class="well" id="tableWell-01">
+                            <h2><span class="label label-primary">1</span> | me</h2>
+                        </div>
+                        <div class="well" id="tableWell-11">
+                            <h2><span class="label label-primary">2</span> | asdfsadfasdf</h2>
+                        </div>
+                        <div class="well" id="tableWell-21">
+                            <h2><span class="label label-primary">3</span> | </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Waiting List Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Waiting List</h4>
+                    </div>
+                    <div class="panel-body" id="waitlistSection">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="/html/assets/js/script.js"></script>

@@ -16,25 +16,27 @@ app.use(express.json());
 
 // Star Wars Characters (DATA)
 // =============================================================
-var tables = [
-    {
-        routeName: "table_1",
-        name: "Trent",
-        phone_number: "555-5555",
-        id: 1,
-    },
-    {
-        routeName: "table_2",
-        name: "Brent",
-        phone_number: "666-6666",
-        id: 1,
-    },
-    {
-        routeName: "table_3",
-        name: "Grent",
-        phone_number: "777-7777",
-        id: 1,
-    },
+var tables = [{
+    routeName: "table_1",
+    name: "Trent",
+    phone_number: "555-5555",
+    email: "example@email.com",
+    id: 1,
+},
+{
+    routeName: "table_2",
+    name: "Brent",
+    phone_number: "666-6666",
+    email: "example@email.com",
+    id: 1,
+},
+{
+    routeName: "table_3",
+    name: "Grent",
+    phone_number: "777-7777",
+    email: "example@email.com",
+    id: 1,
+},
 ];
 
 // Routes
@@ -52,6 +54,29 @@ app.get("/reserve", function (req, res) {
 app.get("/tables", function (req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 });
+
+//display all the reservations
+app.get("/api/tables", function (req, res) {
+    return res.json(tables);
+});
+
+//creating new reservation
+app.post("/api/tables", function (req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newTable = req.body;
+
+    // Using a RegEx Pattern to remove spaces from newCharacter
+    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+    newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+
+    console.log(newTable);
+
+    tables.push(newTable);
+
+    res.json(newTable);
+});
+
 
 // Starts the server to begin listening
 // =============================================================

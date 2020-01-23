@@ -1,0 +1,16 @@
+body {
+    background-image: url(../images/annie-spratt-rdVLN3UFmpU-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+    background-color: rgba(65, 65, 65, 0.432);
+    color: #e9d878;
+}
+
+h2,
+h3,
+h4 {
+    color: #e9d878;
+}
