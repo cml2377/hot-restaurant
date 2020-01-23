@@ -1,0 +1,36 @@
+{
+  "name": "hot-restaurant",
+  "version": "1.0.0",
+  "description": "A hip, trendy restaurant with the worst reservation app in the world (Why won't they use OpenTable, those cheap bastards) that only has 5 tables. That's right, this restaurant can only afford 5 tables. 20 people max.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cml2377/hot-restaurant.git"
+  },
+  "keywords": [
+    "hot",
+    "restaurant",
+    "five",
+    "5",
+    "tables",
+    "express",
+    "node",
+    "practice",
+    "bootcamp",
+    "javascript"
+  ],
+  "author": "Crystal Ly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cml2377/hot-restaurant/issues"
+  },
+  "homepage": "https://github.com/cml2377/hot-restaurant#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.1.0"
+  }
+}
