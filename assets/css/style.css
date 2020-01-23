@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/elvir-k-0y6Y56Pw6DA-unsplash.jpg);
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Amarante', cursive;
@@ -11,8 +11,18 @@ body {
     border-radius: 4px;
 }
 
+.jumbotron {
+    background-color: transparent;
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
 h2,
 h3,
-h4 {
+h4,
+a {
     color: #e9d878;
 }
