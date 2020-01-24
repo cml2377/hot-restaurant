@@ -7,8 +7,8 @@ const phone_number_i_e = $("#phone_number_i")
 const email_i_e = $("#email_i")
 const id_i_e = $("#id_i")
 
-make_reservations_b_e.on("click", functiono() {
-    $.get("/reserve", functionc(data) {
+make_reservations_b_e.on("click", function () {
+    $.get("/reserve", function (data) {
         console.log("reserve page")
     });
 });
