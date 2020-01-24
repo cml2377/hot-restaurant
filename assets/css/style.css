@@ -1,5 +1,6 @@
 body {
-    background-image: url("/images/chinaryBG.jpg");
+    background-image: url("../images/chinaryBG.jpg");
+    height: 100vh;
     font-family: 'Amarante', cursive;
 }
 
@@ -7,7 +8,6 @@ body {
     background-color: rgba(65, 65, 65, 0.432);
     color: #e9d878;
     border-radius: 4px;
-    height: 700px;
     width: 700px;
     float: left;
 }
