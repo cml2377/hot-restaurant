@@ -62,6 +62,18 @@ app.get("/tables", function (req, res) {
 //display all the reservations
 app.get("/api/tables", function (req, res) {
     return res.json(tables);
+    // var new_note = req.body;
+    // print(new_note)
+    // fs.readFile(__dirname + '/db/db.json', function (err, data) {
+    //     var json = JSON.parse(data)
+    //     print(json)
+    //     json.push(new_note)
+    //     print(json)
+    //     fs.writeFile(__dirname + "/db/db.json", JSON.stringify(json), function (err, data) {
+    //         if (err) throw err;
+    //         // return JSON.stringify(json)
+    //     })
+    // });
 });
 
 //creating new reservation
