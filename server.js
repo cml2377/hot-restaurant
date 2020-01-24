@@ -1,6 +1,7 @@
 // =============================================================
 // Dependencies
 // =============================================================
+//pushing from banch LL
 var express = require("express");
 var path = require("path");
 
@@ -20,26 +21,27 @@ app.use(express.static('assets'))
 // Star Wars Characters (DATA)
 // =============================================================
 var tables = [{
-    routeName: "table_1",
-    name: "Trent",
-    phone_number: "555-5555",
-    email: "example@email.com",
-    id: 1,
-},
-{
-    routeName: "table_2",
-    name: "Brent",
-    phone_number: "666-6666",
-    email: "example@email.com",
-    id: 2,
-},
-{
-    routeName: "table_3",
-    name: "Grent",
-    phone_number: "777-7777",
-    email: "example@email.com",
-    id: 3,
-}];
+        routeName: "table_1",
+        name: "Trent",
+        phone_number: "555-5555",
+        email: "example@email.com",
+        id: 1,
+    },
+    {
+        routeName: "table_2",
+        name: "Brent",
+        phone_number: "666-6666",
+        email: "example@email.com",
+        id: 2,
+    },
+    {
+        routeName: "table_3",
+        name: "Grent",
+        phone_number: "777-7777",
+        email: "example@email.com",
+        id: 3,
+    }
+];
 
 // module.export = tables;
 
@@ -47,20 +49,20 @@ var tables = [{
 // =============================================================
 
 // Basic route that sends the user first to the AJAX Page
-app.get("/", function (req, res) {
+app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "html/home.html"));
 });
 
-app.get("/reserve", function (req, res) {
+app.get("/reserve", function(req, res) {
     res.sendFile(path.join(__dirname, "html/reserve.html"));
 });
 
-app.get("/tables", function (req, res) {
+app.get("/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "html/tables.html"));
 });
 
 //display all the reservations
-app.get("/api/tables", function (req, res) {
+app.get("/api/tables", function(req, res) {
     return res.json(tables);
     // var new_note = req.body;
     // print(new_note)
@@ -77,7 +79,7 @@ app.get("/api/tables", function (req, res) {
 });
 
 //creating new reservation
-app.post("/api/newtables", function (req, res) {
+app.post("/api/tables", function(req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newTable = req.body;
@@ -96,6 +98,6 @@ app.post("/api/newtables", function (req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function () {
+app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
 });
