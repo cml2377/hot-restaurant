@@ -32,8 +32,21 @@ submit_b_e.on("click", function () {
     // Question: What does this code do??
     $.post("/tables", newTable)
         .then(function (data) {
-            //Don't know what need here
-            console.log("reserver.html", data);
+            //Don't know what need here <-- ok, who wrote this sentence lol
+            let reservation = data.reservation;
+            let counter = 0;
+
+            reservations.forEach(element => {
+                counter++;
+
+                if (counter <= 5) {
+                    let tableList = `${tableWell} + counter`; //Ok, I'm thinking this needs to be similar to my day planner solution
+                    tableList.append(createTable(element, counter)); // Make a function createTable that takes the var newTable content and puts it in these elements?
+                } else {
+                    let waitlist = $("#waitlistSection");
+                    waitlist.append(createTable(element, counter));
+                }
+            });
             alert("Adding your reservation...");
         });
 });
